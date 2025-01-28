@@ -1,0 +1,907 @@
+{
+    "global": {
+        "daemon": false,
+        "max_encoder_instance": 13,
+        "logs_directory": "/home/odr/ODR-mmbTools/ODR-EncoderManager/logs/",
+        "supervisor_xmlrpc": "http://odr:odr@127.0.0.1:8001/RPC2",
+        "static_directory": "/home/odr/ODR-mmbTools/ODR-EncoderManager/static/",
+        "host": "0.0.0.0",
+        "supervisor_file": "/home/odr/ODR-mmbTools/config/supervisor/ODR-encoders.conf",
+        "port": 8003
+    },
+    "auth": {
+        "users": [
+            {
+                "username": "odr",
+                "password": "odr"
+            }
+        ]
+    },
+    "odr": [
+        {
+            "uniq_id": "63a4992d-b933-4136-90ef-34512340964e",
+            "autostart": "false",
+            "path": {
+                "encoder_path": "/usr/local/bin/odr-audioenc",
+                "padenc_path": "/usr/local/bin/odr-padenc",
+                "sourcecompanion_path": "/usr/local/bin/odr-sourcecompanion",
+                "zmq_key_tmp_file": "/var/tmp/zmq-P01.key"
+            },
+            "source": {
+                "type": "stream",
+                "stats_socket": "/var/tmp/P01.stats",
+                "stream_url": "http://listen.livestreamingservice.com:8800",
+                "stream_writeicytext": "true",
+                "stream_lib": "gst",
+                "alsa_device": "plughw:1,0",
+                "driftcomp": "true",
+                "silence_detect": "true",
+                "silence_duration": "60",
+                "audio_gain": "",
+                "avt_input_uri": "udp://:32010",
+                "avt_control_uri": "udp://192.168.128.111:9325",
+                "avt_pad_port": "9405",
+                "avt_jitter_size": "80",
+                "avt_timeout": "4000",
+                "aes67_sdp_file": "/var/tmp/63a4992d-b933-4136-90ef-34512340964e.sdp",
+                "aes67_sdp": ""
+            },
+            "output": {
+                "type": "dabp",
+                "output": [
+                    {
+                        "name": "",
+                        "type": "editcp",
+                        "host": "127.0.0.1",
+                        "port": "9001",
+                        "enable": "true"
+                    }
+                ],
+                "zmq_key": "",
+                "bitrate": "88",
+                "samplerate": "48000",
+                "channels": "2",
+                "dabp_enc": "PS",
+                "dabp_afterburner": "true",
+                "dab_dabmode": "j",
+                "dab_dabpsy": "1",
+                "edi_identifier": "",
+                "edi_timestamps_delay": ""
+            },
+            "padenc": {
+                "enable": "true",
+                "pad": "34",
+                "dls_file": "/home/odr/ODR-mmbTools/config/mot/P01/INFO.dls",
+                "slide_directory": "/home/odr/ODR-mmbTools/config/mot/P01/slide",
+                "slide_sleeping": "0",
+                "slide_once": "false",
+                "raw_dls": "false",
+                "raw_slides": "false",
+                "uniform_label": "12",
+                "uniform_label_ins": "1200",
+                "slide_carousel_interval": "",
+                "slide_live_interval": "",
+                "slide_live_lifetime": ""
+            },
+            "name": "ENERGY98",
+            "description": "Energy98"
+        },
+        {
+            "uniq_id": "91362c6e-77a7-4aed-9527-02b695484e2f",
+            "autostart": "false",
+            "path": {
+                "encoder_path": "/usr/local/bin/odr-audioenc",
+                "padenc_path": "/usr/local/bin/odr-padenc",
+                "sourcecompanion_path": "/usr/local/bin/odr-sourcecompanion",
+                "zmq_key_tmp_file": "/var/tmp/zmq-P02.key"
+            },
+            "source": {
+                "type": "stream",
+                "stats_socket": "/var/tmp/P02.stats",
+                "stream_url": "http://listen.livestreamingservice.com:8128",
+                "stream_writeicytext": "true",
+                "stream_lib": "gst",
+                "alsa_device": "plughw:1,0",
+                "driftcomp": "true",
+                "silence_detect": "true",
+                "silence_duration": "60",
+                "audio_gain": "",
+                "avt_input_uri": "udp://:32010",
+                "avt_control_uri": "udp://192.168.128.111:9325",
+                "avt_pad_port": "9405",
+                "avt_jitter_size": "80",
+                "avt_timeout": "4000",
+                "aes67_sdp_file": "/var/tmp/91362c6e-77a7-4aed-9527-02b695484e2f.sdp",
+                "aes67_sdp": ""
+            },
+            "output": {
+                "type": "dabp",
+                "output": [
+                    {
+                        "name": "",
+                        "type": "editcp",
+                        "host": "127.0.0.1",
+                        "port": "9002",
+                        "enable": "true"
+                    }
+                ],
+                "zmq_key": "",
+                "bitrate": "88",
+                "samplerate": "48000",
+                "channels": "2",
+                "dabp_enc": "PS",
+                "dabp_afterburner": "true",
+                "dab_dabmode": "j",
+                "dab_dabpsy": "1",
+                "edi_identifier": "",
+                "edi_timestamps_delay": ""
+            },
+            "padenc": {
+                "enable": "true",
+                "pad": "34",
+                "dls_file": "/home/odr/ODR-mmbTools/config/mot/P02/INFO.dls",
+                "slide_directory": "/home/odr/ODR-mmbTools/config/mot/P02/slide",
+                "slide_sleeping": "0",
+                "slide_once": "false",
+                "raw_dls": "false",
+                "raw_slides": "false",
+                "uniform_label": "12",
+                "uniform_label_ins": "1200",
+                "slide_carousel_interval": "",
+                "slide_live_interval": "",
+                "slide_live_lifetime": ""
+            },
+            "name": "POWER",
+            "description": "Power"
+        },
+        {
+            "uniq_id": "8ad19122-6b76-40bf-a9d8-19f5435f04b4",
+            "autostart": "false",
+            "path": {
+                "encoder_path": "/usr/local/bin/odr-audioenc",
+                "padenc_path": "/usr/local/bin/odr-padenc",
+                "sourcecompanion_path": "/usr/local/bin/odr-sourcecompanion",
+                "zmq_key_tmp_file": "/var/tmp/zmq-P03.key"
+            },
+            "source": {
+                "type": "stream",
+                "stats_socket": "/var/tmp/P03.stats",
+                "stream_url": "http://listen.livestreamingservice.com:8070",
+                "stream_writeicytext": "true",
+                "stream_lib": "gst",
+                "alsa_device": "plughw:1,0",
+                "driftcomp": "true",
+                "silence_detect": "true",
+                "silence_duration": "60",
+                "audio_gain": "",
+                "avt_input_uri": "udp://:32010",
+                "avt_control_uri": "udp://192.168.128.111:9325",
+                "avt_pad_port": "9405",
+                "avt_jitter_size": "80",
+                "avt_timeout": "4000",
+                "aes67_sdp_file": "/var/tmp/8ad19122-6b76-40bf-a9d8-19f5435f04b4.sdp",
+                "aes67_sdp": ""
+            },
+            "output": {
+                "type": "dabp",
+                "output": [
+                    {
+                        "name": "",
+                        "type": "editcp",
+                        "host": "127.0.0.1",
+                        "port": "9003",
+                        "enable": "true"
+                    }
+                ],
+                "zmq_key": "",
+                "bitrate": "88",
+                "samplerate": "48000",
+                "channels": "2",
+                "dabp_enc": "PS",
+                "dabp_afterburner": "true",
+                "dab_dabmode": "j",
+                "dab_dabpsy": "1",
+                "edi_identifier": "",
+                "edi_timestamps_delay": ""
+            },
+            "padenc": {
+                "enable": "true",
+                "pad": "34",
+                "dls_file": "/home/odr/ODR-mmbTools/config/mot/P03/INFO.dls",
+                "slide_directory": "/home/odr/ODR-mmbTools/config/mot/P03/slide",
+                "slide_sleeping": "0",
+                "slide_once": "false",
+                "raw_dls": "false",
+                "raw_slides": "false",
+                "uniform_label": "12",
+                "uniform_label_ins": "1200",
+                "slide_carousel_interval": "",
+                "slide_live_interval": "",
+                "slide_live_lifetime": ""
+            },
+            "name": "UKTOP40",
+            "description": "Uk Top40"
+        },
+        {
+            "uniq_id": "cbd9385b-8499-4c0b-96b7-f2734651214b",
+            "autostart": "false",
+            "path": {
+                "encoder_path": "/usr/local/bin/odr-audioenc",
+                "padenc_path": "/usr/local/bin/odr-padenc",
+                "sourcecompanion_path": "/usr/local/bin/odr-sourcecompanion",
+                "zmq_key_tmp_file": "/var/tmp/zmq-P04.key"
+            },
+            "source": {
+                "type": "stream",
+                "stats_socket": "/var/tmp/P04.stats",
+                "stream_url": "http://listen.livestreamingservice.com:8028",
+                "stream_writeicytext": "true",
+                "stream_lib": "gst",
+                "alsa_device": "plughw:1,0",
+                "driftcomp": "true",
+                "silence_detect": "true",
+                "silence_duration": "60",
+                "audio_gain": "",
+                "avt_input_uri": "udp://:32010",
+                "avt_control_uri": "udp://192.168.128.111:9325",
+                "avt_pad_port": "9405",
+                "avt_jitter_size": "80",
+                "avt_timeout": "4000",
+                "aes67_sdp_file": "/var/tmp/cbd9385b-8499-4c0b-96b7-f2734651214b.sdp",
+                "aes67_sdp": ""
+            },
+            "output": {
+                "type": "dabp",
+                "output": [
+                    {
+                        "name": "",
+                        "type": "editcp",
+                        "host": "127.0.0.1",
+                        "port": "9004",
+                        "enable": "true"
+                    }
+                ],
+                "zmq_key": "",
+                "bitrate": "88",
+                "samplerate": "48000",
+                "channels": "2",
+                "dabp_enc": "PS",
+                "dabp_afterburner": "true",
+                "dab_dabmode": "j",
+                "dab_dabpsy": "1",
+                "edi_identifier": "",
+                "edi_timestamps_delay": ""
+            },
+            "padenc": {
+                "enable": "true",
+                "pad": "34",
+                "dls_file": "/home/odr/ODR-mmbTools/config/mot/P04/INFO.dls",
+                "slide_directory": "/home/odr/ODR-mmbTools/config/mot/P04/slide",
+                "slide_sleeping": "0",
+                "slide_once": "false",
+                "raw_dls": "false",
+                "raw_slides": "false",
+                "uniform_label": "12",
+                "uniform_label_ins": "1200",
+                "slide_carousel_interval": "",
+                "slide_live_interval": "",
+                "slide_live_lifetime": ""
+            },
+            "name": "ROCK40",
+            "description": "Rock40"
+        },
+        {
+            "uniq_id": "3b96520b-a58e-410a-a5d3-b4134445a458",
+            "autostart": "false",
+            "path": {
+                "encoder_path": "/usr/local/bin/odr-audioenc",
+                "padenc_path": "/usr/local/bin/odr-padenc",
+                "sourcecompanion_path": "/usr/local/bin/odr-sourcecompanion",
+                "zmq_key_tmp_file": "/var/tmp/zmq-P05.key"
+            },
+            "source": {
+                "type": "stream",
+                "stats_socket": "/var/tmp/P05.stats",
+                "stream_url": "http://listen.livestreamingservice.com:8132",
+                "stream_writeicytext": "true",
+                "stream_lib": "gst",
+                "alsa_device": "plughw:1,0",
+                "driftcomp": "true",
+                "silence_detect": "true",
+                "silence_duration": "60",
+                "audio_gain": "",
+                "avt_input_uri": "udp://:32010",
+                "avt_control_uri": "udp://192.168.128.111:9325",
+                "avt_pad_port": "9405",
+                "avt_jitter_size": "80",
+                "avt_timeout": "4000",
+                "aes67_sdp_file": "/var/tmp/3b96520b-a58e-410a-a5d3-b4134445a458.sdp",
+                "aes67_sdp": ""
+            },
+            "output": {
+                "type": "dabp",
+                "output": [
+                    {
+                        "name": "",
+                        "type": "editcp",
+                        "host": "127.0.0.1",
+                        "port": "9005",
+                        "enable": "true"
+                    }
+                ],
+                "zmq_key": "",
+                "bitrate": "88",
+                "samplerate": "48000",
+                "channels": "2",
+                "dabp_enc": "PS",
+                "dabp_afterburner": "true",
+                "dab_dabmode": "j",
+                "dab_dabpsy": "1",
+                "edi_identifier": "",
+                "edi_timestamps_delay": ""
+            },
+            "padenc": {
+                "enable": "true",
+                "pad": "34",
+                "dls_file": "/home/odr/ODR-mmbTools/config/mot/P05/INFO.dls",
+                "slide_directory": "/home/odr/ODR-mmbTools/config/mot/P05/slide",
+                "slide_sleeping": "0",
+                "slide_once": "false",
+                "raw_dls": "false",
+                "raw_slides": "false",
+                "uniform_label": "12",
+                "uniform_label_ins": "1200",
+                "slide_carousel_interval": "",
+                "slide_live_interval": "",
+                "slide_live_lifetime": ""
+            },
+            "name": "CLASSIC HITS",
+            "description": "Classic Hits"
+        },
+        {
+            "uniq_id": "0d741242-79ec-4ae8-82b5-0bdda3deb6f2",
+            "autostart": "false",
+            "path": {
+                "encoder_path": "/usr/local/bin/odr-audioenc",
+                "padenc_path": "/usr/local/bin/odr-padenc",
+                "sourcecompanion_path": "/usr/local/bin/odr-sourcecompanion",
+                "zmq_key_tmp_file": "/var/tmp/zmq-P06.key"
+            },
+            "source": {
+                "type": "stream",
+                "stats_socket": "/var/tmp/P06.stats",
+                "stream_url": "http://listen.livestreamingservice.com:8000",
+                "stream_writeicytext": "true",
+                "stream_lib": "gst",
+                "alsa_device": "plughw:1,0",
+                "driftcomp": "true",
+                "silence_detect": "true",
+                "silence_duration": "60",
+                "audio_gain": "",
+                "avt_input_uri": "udp://:32010",
+                "avt_control_uri": "udp://192.168.128.111:9325",
+                "avt_pad_port": "9405",
+                "avt_jitter_size": "80",
+                "avt_timeout": "4000",
+                "aes67_sdp_file": "/var/tmp/0d741242-79ec-4ae8-82b5-0bdda3deb6f2.sdp",
+                "aes67_sdp": ""
+            },
+            "output": {
+                "type": "dabp",
+                "output": [
+                    {
+                        "name": "",
+                        "type": "editcp",
+                        "host": "127.0.0.1",
+                        "port": "9006",
+                        "enable": "true"
+                    }
+                ],
+                "zmq_key": "",
+                "bitrate": "88",
+                "samplerate": "48000",
+                "channels": "2",
+                "dabp_enc": "PS",
+                "dabp_afterburner": "true",
+                "dab_dabmode": "j",
+                "dab_dabpsy": "1",
+                "edi_identifier": "",
+                "edi_timestamps_delay": ""
+            },
+            "padenc": {
+                "enable": "true",
+                "pad": "34",
+                "dls_file": "/home/odr/ODR-mmbTools/config/mot/P06/INFO.dls",
+                "slide_directory": "/home/odr/ODR-mmbTools/config/mot/P06/slide",
+                "slide_sleeping": "0",
+                "slide_once": "false",
+                "raw_dls": "false",
+                "raw_slides": "false",
+                "uniform_label": "12",
+                "uniform_label_ins": "1200",
+                "slide_carousel_interval": "",
+                "slide_live_interval": "",
+                "slide_live_lifetime": ""
+            },
+            "name": "AWESOME80",
+            "description": "Awesome 80's"
+        },
+        {
+            "uniq_id": "a0fa049b-a726-43eb-bf63-4f725e899d84",
+            "autostart": "false",
+            "path": {
+                "encoder_path": "/usr/local/bin/odr-audioenc",
+                "padenc_path": "/usr/local/bin/odr-padenc",
+                "sourcecompanion_path": "/usr/local/bin/odr-sourcecompanion",
+                "zmq_key_tmp_file": "/var/tmp/zmq-P07.key"
+            },
+            "source": {
+                "type": "stream",
+                "stats_socket": "/var/tmp/P07.stats",
+                "stream_url": "http://listen.livestreamingservice.com:8074",
+                "stream_writeicytext": "true",
+                "stream_lib": "gst",
+                "alsa_device": "plughw:1,0",
+                "driftcomp": "true",
+                "silence_detect": "true",
+                "silence_duration": "60",
+                "audio_gain": "",
+                "avt_input_uri": "udp://:32010",
+                "avt_control_uri": "udp://192.168.128.111:9325",
+                "avt_pad_port": "9405",
+                "avt_jitter_size": "80",
+                "avt_timeout": "4000",
+                "aes67_sdp_file": "/var/tmp/a0fa049b-a726-43eb-bf63-4f725e899d84.sdp",
+                "aes67_sdp": ""
+            },
+            "output": {
+                "type": "dabp",
+                "output": [
+                    {
+                        "name": "",
+                        "type": "editcp",
+                        "host": "127.0.0.1",
+                        "port": "9007",
+                        "enable": "true"
+                    }
+                ],
+                "zmq_key": "",
+                "bitrate": "88",
+                "samplerate": "48000",
+                "channels": "2",
+                "dabp_enc": "PS",
+                "dabp_afterburner": "true",
+                "dab_dabmode": "j",
+                "dab_dabpsy": "1",
+                "edi_identifier": "",
+                "edi_timestamps_delay": ""
+            },
+            "padenc": {
+                "enable": "true",
+                "pad": "34",
+                "dls_file": "/home/odr/ODR-mmbTools/config/mot/P07/INFO.dls",
+                "slide_directory": "/home/odr/ODR-mmbTools/config/mot/P07/slide",
+                "slide_sleeping": "0",
+                "slide_once": "false",
+                "raw_dls": "false",
+                "raw_slides": "false",
+                "uniform_label": "12",
+                "uniform_label_ins": "1200",
+                "slide_carousel_interval": "",
+                "slide_live_interval": "",
+                "slide_live_lifetime": ""
+            },
+            "name": "THE VIBE",
+            "description": "The Vibe"
+        },
+        {
+            "uniq_id": "30d42a0a-d88a-4215-9ab6-207d63b77100",
+            "autostart": "false",
+            "path": {
+                "encoder_path": "/usr/local/bin/odr-audioenc",
+                "padenc_path": "/usr/local/bin/odr-padenc",
+                "sourcecompanion_path": "/usr/local/bin/odr-sourcecompanion",
+                "zmq_key_tmp_file": "/var/tmp/zmq-P08.key"
+            },
+            "source": {
+                "type": "stream",
+                "stats_socket": "/var/tmp/P08.stats",
+                "stream_url": "http://listen.livestreamingservice.com:8054",
+                "stream_writeicytext": "true",
+                "stream_lib": "gst",
+                "alsa_device": "plughw:1,0",
+                "driftcomp": "true",
+                "silence_detect": "true",
+                "silence_duration": "60",
+                "audio_gain": "",
+                "avt_input_uri": "udp://:32010",
+                "avt_control_uri": "udp://192.168.128.111:9325",
+                "avt_pad_port": "9405",
+                "avt_jitter_size": "80",
+                "avt_timeout": "4000",
+                "aes67_sdp_file": "/var/tmp/30d42a0a-d88a-4215-9ab6-207d63b77100.sdp",
+                "aes67_sdp": ""
+            },
+            "output": {
+                "type": "dabp",
+                "output": [
+                    {
+                        "name": "",
+                        "type": "editcp",
+                        "host": "127.0.0.1",
+                        "port": "9008",
+                        "enable": "true"
+                    }
+                ],
+                "zmq_key": "",
+                "bitrate": "88",
+                "samplerate": "48000",
+                "channels": "2",
+                "dabp_enc": "PS",
+                "dabp_afterburner": "true",
+                "dab_dabmode": "j",
+                "dab_dabpsy": "1",
+                "edi_identifier": "",
+                "edi_timestamps_delay": ""
+            },
+            "padenc": {
+                "enable": "true",
+                "pad": "34",
+                "dls_file": "/home/odr/ODR-mmbTools/config/mot/P08/INFO.dls",
+                "slide_directory": "/home/odr/ODR-mmbTools/config/mot/P08/slide",
+                "slide_sleeping": "0",
+                "slide_once": "false",
+                "raw_dls": "false",
+                "raw_slides": "false",
+                "uniform_label": "12",
+                "uniform_label_ins": "1200",
+                "slide_carousel_interval": "",
+                "slide_live_interval": "",
+                "slide_live_lifetime": ""
+            },
+            "name": "THE BEAT",
+            "description": "The Beat"
+        },
+        {
+            "uniq_id": "9b0eb1fe-8967-4c2a-8175-9e12002db557",
+            "autostart": "false",
+            "path": {
+                "encoder_path": "/usr/local/bin/odr-audioenc",
+                "padenc_path": "/usr/local/bin/odr-padenc",
+                "sourcecompanion_path": "/usr/local/bin/odr-sourcecompanion",
+                "zmq_key_tmp_file": "/var/tmp/zmq-P09.key"
+            },
+            "source": {
+                "type": "stream",
+                "stats_socket": "/var/tmp/P09.stats",
+                "stream_url": "http://listen.livestreamingservice.com:8044",
+                "stream_writeicytext": "true",
+                "stream_lib": "gst",
+                "alsa_device": "plughw:1,0",
+                "driftcomp": "true",
+                "silence_detect": "true",
+                "silence_duration": "60",
+                "audio_gain": "",
+                "avt_input_uri": "udp://:32010",
+                "avt_control_uri": "udp://192.168.128.111:9325",
+                "avt_pad_port": "9405",
+                "avt_jitter_size": "80",
+                "avt_timeout": "4000",
+                "aes67_sdp_file": "/var/tmp/9b0eb1fe-8967-4c2a-8175-9e12002db557.sdp",
+                "aes67_sdp": ""
+            },
+            "output": {
+                "type": "dabp",
+                "output": [
+                    {
+                        "name": "",
+                        "type": "editcp",
+                        "host": "127.0.0.1",
+                        "port": "9009",
+                        "enable": "true"
+                    }
+                ],
+                "zmq_key": "",
+                "bitrate": "88",
+                "samplerate": "48000",
+                "channels": "2",
+                "dabp_enc": "PS",
+                "dabp_afterburner": "true",
+                "dab_dabmode": "j",
+                "dab_dabpsy": "1",
+                "edi_identifier": "",
+                "edi_timestamps_delay": ""
+            },
+            "padenc": {
+                "enable": "true",
+                "pad": "34",
+                "dls_file": "/home/odr/ODR-mmbTools/config/mot/P09/INFO.dls",
+                "slide_directory": "/home/odr/ODR-mmbTools/config/mot/P09/slide",
+                "slide_sleeping": "0",
+                "slide_once": "false",
+                "raw_dls": "false",
+                "raw_slides": "false",
+                "uniform_label": "12",
+                "uniform_label_ins": "1200",
+                "slide_carousel_interval": "",
+                "slide_live_interval": "",
+                "slide_live_lifetime": ""
+            },
+            "name": "ENERGY93",
+            "description": "Energy93"
+        },
+        {
+            "uniq_id": "86d4545b-50b6-4dab-8560-07354906b529",
+            "autostart": "false",
+            "path": {
+                "encoder_path": "/usr/local/bin/odr-audioenc",
+                "padenc_path": "/usr/local/bin/odr-padenc",
+                "sourcecompanion_path": "/usr/local/bin/odr-sourcecompanion",
+                "zmq_key_tmp_file": "/var/tmp/zmq-P10.key"
+            },
+            "source": {
+                "type": "stream",
+                "stats_socket": "/var/tmp/P10.stats",
+                "stream_url": "http://listen.livestreamingservice.com:8060",
+                "stream_writeicytext": "true",
+                "stream_lib": "gst",
+                "alsa_device": "plughw:1,0",
+                "driftcomp": "true",
+                "silence_detect": "true",
+                "silence_duration": "60",
+                "audio_gain": "",
+                "avt_input_uri": "udp://:32010",
+                "avt_control_uri": "udp://192.168.128.111:9325",
+                "avt_pad_port": "9405",
+                "avt_jitter_size": "80",
+                "avt_timeout": "4000",
+                "aes67_sdp_file": "/var/tmp/86d4545b-50b6-4dab-8560-07354906b529.sdp",
+                "aes67_sdp": ""
+            },
+            "output": {
+                "type": "dabp",
+                "output": [
+                    {
+                        "name": "",
+                        "type": "editcp",
+                        "host": "127.0.0.1",
+                        "port": "9010",
+                        "enable": "true"
+                    }
+                ],
+                "zmq_key": "",
+                "bitrate": "88",
+                "samplerate": "48000",
+                "channels": "2",
+                "dabp_enc": "PS",
+                "dabp_afterburner": "true",
+                "dab_dabmode": "j",
+                "dab_dabpsy": "1",
+                "edi_identifier": "",
+                "edi_timestamps_delay": ""
+            },
+            "padenc": {
+                "enable": "true",
+                "pad": "34",
+                "dls_file": "/home/odr/ODR-mmbTools/config/mot/P10/INFO.dls",
+                "slide_directory": "/home/odr/ODR-mmbTools/config/mot/P10/slide",
+                "slide_sleeping": "0",
+                "slide_once": "false",
+                "raw_dls": "false",
+                "raw_slides": "false",
+                "uniform_label": "12",
+                "uniform_label_ins": "1200",
+                "slide_carousel_interval": "",
+                "slide_live_interval": "",
+                "slide_live_lifetime": ""
+            },
+            "name": "MELLOW GOLD",
+            "description": "Mellow Gold"
+        },
+        {
+            "uniq_id": "f72fcb25-86db-486b-90d3-09dc96cf5a32",
+            "autostart": "false",
+            "path": {
+                "encoder_path": "/usr/local/bin/odr-audioenc",
+                "padenc_path": "/usr/local/bin/odr-padenc",
+                "sourcecompanion_path": "/usr/local/bin/odr-sourcecompanion",
+                "zmq_key_tmp_file": "/var/tmp/zmq-P11.key"
+            },
+            "source": {
+                "type": "stream",
+                "stats_socket": "/var/tmp/P11.stats",
+                "stream_url": "http://listen.livestreamingservice.com:8012",
+                "stream_writeicytext": "true",
+                "stream_lib": "gst",
+                "alsa_device": "plughw:1,0",
+                "driftcomp": "true",
+                "silence_detect": "true",
+                "silence_duration": "60",
+                "audio_gain": "",
+                "avt_input_uri": "udp://:32010",
+                "avt_control_uri": "udp://192.168.128.111:9325",
+                "avt_pad_port": "9405",
+                "avt_jitter_size": "80",
+                "avt_timeout": "4000",
+                "aes67_sdp_file": "/var/tmp/f72fcb25-86db-486b-90d3-09dc96cf5a32.sdp",
+                "aes67_sdp": ""
+            },
+            "output": {
+                "type": "dabp",
+                "output": [
+                    {
+                        "name": "",
+                        "type": "editcp",
+                        "host": "127.0.0.1",
+                        "port": "9011",
+                        "enable": "true"
+                    }
+                ],
+                "zmq_key": "",
+                "bitrate": "88",
+                "samplerate": "48000",
+                "channels": "2",
+                "dabp_enc": "PS",
+                "dabp_afterburner": "true",
+                "dab_dabmode": "j",
+                "dab_dabpsy": "1",
+                "edi_identifier": "",
+                "edi_timestamps_delay": ""
+            },
+            "padenc": {
+                "enable": "true",
+                "pad": "34",
+                "dls_file": "/home/odr/ODR-mmbTools/config/mot/P11/INFO.dls",
+                "slide_directory": "/home/odr/ODR-mmbTools/config/mot/P11/slide",
+                "slide_sleeping": "0",
+                "slide_once": "false",
+                "raw_dls": "false",
+                "raw_slides": "false",
+                "uniform_label": "12",
+                "uniform_label_ins": "1200",
+                "slide_carousel_interval": "",
+                "slide_live_interval": "",
+                "slide_live_lifetime": ""
+            },
+            "name": "STAR90",
+            "description": "Star 90's"
+        },
+        {
+            "uniq_id": "3a9e3453-f98d-4a40-9cc3-75f8a26e42b1",
+            "autostart": "false",
+            "path": {
+                "encoder_path": "/usr/local/bin/odr-audioenc",
+                "padenc_path": "/usr/local/bin/odr-padenc",
+                "sourcecompanion_path": "/usr/local/bin/odr-sourcecompanion",
+                "zmq_key_tmp_file": "/var/tmp/zmq-P12.key"
+            },
+            "source": {
+                "type": "stream",
+                "stats_socket": "/var/tmp/P12.stats",
+                "stream_url": "http://listen.livestreamingservice.com:8004",
+                "stream_writeicytext": "true",
+                "stream_lib": "gst",
+                "alsa_device": "plughw:1,0",
+                "driftcomp": "true",
+                "silence_detect": "true",
+                "silence_duration": "60",
+                "audio_gain": "",
+                "avt_input_uri": "udp://:32010",
+                "avt_control_uri": "udp://192.168.128.111:9325",
+                "avt_pad_port": "9405",
+                "avt_jitter_size": "80",
+                "avt_timeout": "4000",
+                "aes67_sdp_file": "/var/tmp/3a9e3453-f98d-4a40-9cc3-75f8a26e42b1.sdp",
+                "aes67_sdp": ""
+            },
+            "output": {
+                "type": "dabp",
+                "output": [
+                    {
+                        "name": "",
+                        "type": "editcp",
+                        "host": "127.0.0.1",
+                        "port": "9012",
+                        "enable": "true"
+                    }
+                ],
+                "zmq_key": "",
+                "bitrate": "88",
+                "samplerate": "48000",
+                "channels": "2",
+                "dabp_enc": "PS",
+                "dabp_afterburner": "true",
+                "dab_dabmode": "j",
+                "dab_dabpsy": "1",
+                "edi_identifier": "",
+                "edi_timestamps_delay": ""
+            },
+            "padenc": {
+                "enable": "true",
+                "pad": "34",
+                "dls_file": "/home/odr/ODR-mmbTools/config/mot/P12/INFO.dls",
+                "slide_directory": "/home/odr/ODR-mmbTools/config/mot/P12/slide",
+                "slide_sleeping": "0",
+                "slide_once": "false",
+                "raw_dls": "false",
+                "raw_slides": "false",
+                "uniform_label": "12",
+                "uniform_label_ins": "1200",
+                "slide_carousel_interval": "",
+                "slide_live_interval": "",
+                "slide_live_lifetime": ""
+            },
+            "name": "THE BREEZE",
+            "description": "The Breeze"
+        },
+        {
+            "uniq_id": "1b8d0058-3f43-46e1-848c-debd31836dc2",
+            "autostart": "false",
+            "path": {
+                "encoder_path": "/usr/local/bin/odr-audioenc",
+                "padenc_path": "/usr/local/bin/odr-padenc",
+                "sourcecompanion_path": "/usr/local/bin/odr-sourcecompanion",
+                "zmq_key_tmp_file": "/var/tmp/zmq-P13.key"
+            },
+            "source": {
+                "type": "stream",
+                "stats_socket": "/var/tmp/P13.stats",
+                "stream_url": "http://listen.livestreamingservice.com/181-classical_128k.mp3",
+                "stream_writeicytext": "true",
+                "stream_lib": "gst",
+                "alsa_device": "plughw:1,0",
+                "driftcomp": "true",
+                "silence_detect": "true",
+                "silence_duration": "60",
+                "audio_gain": "",
+                "avt_input_uri": "udp://:32010",
+                "avt_control_uri": "udp://192.168.128.111:9325",
+                "avt_pad_port": "9405",
+                "avt_jitter_size": "80",
+                "avt_timeout": "4000",
+                "aes67_sdp_file": "/var/tmp/1b8d0058-3f43-46e1-848c-debd31836dc2.sdp",
+                "aes67_sdp": ""
+            },
+            "output": {
+                "type": "dabp",
+                "output": [
+                    {
+                        "name": "",
+                        "type": "editcp",
+                        "host": "127.0.0.1",
+                        "port": "9013",
+                        "enable": "true"
+                    }
+                ],
+                "zmq_key": "",
+                "bitrate": "88",
+                "samplerate": "48000",
+                "channels": "2",
+                "dabp_enc": "PS",
+                "dabp_afterburner": "true",
+                "dab_dabmode": "j",
+                "dab_dabpsy": "1",
+                "edi_identifier": "",
+                "edi_timestamps_delay": ""
+            },
+            "padenc": {
+                "enable": "true",
+                "pad": "34",
+                "dls_file": "/home/odr/ODR-mmbTools/config/mot/P13/INFO.dls",
+                "slide_directory": "/home/odr/ODR-mmbTools/config/mot/P13/slide",
+                "slide_sleeping": "0",
+                "slide_once": "false",
+                "raw_dls": "false",
+                "raw_slides": "false",
+                "uniform_label": "12",
+                "uniform_label_ins": "1200",
+                "slide_carousel_interval": "",
+                "slide_live_interval": "",
+                "slide_live_lifetime": ""
+            },
+            "name": "CLASSICAL",
+            "description": "Classical"
+        }
+    ],
+    "plugins": {}
+}

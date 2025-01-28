@@ -1,0 +1,391 @@
+general {
+    dabmode 1
+    nbframes 0
+    syslog false
+    tist false
+    managementport 12720
+}
+
+remotecontrol {
+    telnetport 12721
+    zmqendpoint tcp://lo:12722
+}
+
+ensemble {
+    id 0x4fff
+    ecc 0xe1
+    local-time-offset auto
+    international-table 1
+    reconfig-counter hash
+    label "181FM"
+    shortlabel ""
+}
+
+services {
+    srv-01 {
+        id 0x001
+        ecc 0xe2
+        label "ENERGY98"
+        shortlabel ""
+        pty 15
+        pty-sd static
+        language 0x09
+    }
+    srv-02 {
+        id 0x002
+        ecc 0xe1
+        label "POWER"
+        shortlabel ""
+        pty 10
+        pty-sd static
+        language 0x09
+    }
+    srv-03 {
+        id 0x003
+        ecc 0xe1
+        label "UKTOP40"
+        shortlabel ""
+        pty 10
+        pty-sd static
+        language 0x09
+    }
+    srv-04 {
+        id 0x004
+        ecc 0xe1
+        label "ROCK40"
+        shortlabel ""
+        pty 11
+        pty-sd static
+        language 0x09
+    }
+    srv-05 {
+        id 0x005
+        ecc 0xe1
+        label "CLASSIC HITS"
+        shortlabel ""
+        pty 13
+        pty-sd static
+        language 0x09
+    }
+    srv-06 {
+        id 0x006
+        ecc 0xe1
+        label "AWESOME80"
+        shortlabel ""
+        pty 13
+        pty-sd static
+        language 0x09
+    }
+    srv-07 {
+        id 0x007
+        ecc 0xe1
+        label "THE VIBE"
+        shortlabel ""
+        pty 15
+        pty-sd static
+        language 0x09
+    }
+    srv-08 {
+        id 0x008
+        ecc 0xe1
+        label "THE BEAT"
+        shortlabel ""
+        pty 15
+        pty-sd static
+        language 0x09
+    }
+    srv-09 {
+        id 0x009
+        ecc 0xe1
+        label "ENERGY93"
+        shortlabel ""
+        pty 15
+        pty-sd static
+        language 0x09
+    }
+    srv-10 {
+        id 0x010
+        ecc 0xe1
+        label "MELLOW GOLD"
+        shortlabel ""
+        pty 13
+        pty-sd static
+        language 0x09
+    }
+    srv-11 {
+        id 0x011
+        ecc 0xe1
+        label "STAR90"
+        shortlabel ""
+        pty 13
+        pty-sd static
+        language 0x09
+    }
+    srv-12 {
+        id 0x012
+        ecc 0xe1
+        label "THE BREEZE"
+        shortlabel ""
+        pty 24
+        pty-sd static
+        language 0x09
+    }
+    srv-13 {
+        id 0x013
+        ecc 0xe1
+        label "CLASSICAL"
+        shortlabel ""
+        pty 14
+        pty-sd static
+        language 0x09
+    }            
+}
+
+subchannels {
+    sub-01 {
+        type dabplus
+        bitrate 88
+        id 1
+        protection 3
+        inputproto edi
+        inputuri "tcp://127.0.0.1:9001"
+        buffer-management prebuffering
+        buffer 40
+        prebuffering 20
+    }
+    sub-02 {
+        type dabplus
+        bitrate 88
+        id 2
+        protection 3
+        inputproto edi
+        inputuri "tcp://127.0.0.1:9002"
+        buffer-management prebuffering
+        buffer 40
+        prebuffering 20
+    }
+    sub-03 {
+        type dabplus
+        bitrate 88
+        id 3
+        protection 3
+        inputproto edi
+        inputuri "tcp://127.0.0.1:9003"
+        buffer-management prebuffering
+        buffer 40
+        prebuffering 20
+    }
+    sub-04 {
+        type dabplus
+        bitrate 88
+        id 4
+        protection 3
+        inputproto edi
+        inputuri "tcp://127.0.0.1:9004"
+        buffer-management prebuffering
+        buffer 40
+        prebuffering 20
+    }
+    sub-05 {
+        type dabplus
+        bitrate 88
+        id 5
+        protection 3
+        inputproto edi
+        inputuri "tcp://127.0.0.1:9005"
+        buffer-management prebuffering
+        buffer 40
+        prebuffering 20
+    }
+    sub-06 {
+        type dabplus
+        bitrate 88
+        id 6
+        protection 3
+        inputproto edi
+        inputuri "tcp://127.0.0.1:9006"
+        buffer-management prebuffering
+        buffer 40
+        prebuffering 20
+    }
+    sub-07 {
+        type dabplus
+        bitrate 88
+        id 7
+        protection 3
+        inputproto edi
+        inputuri "tcp://127.0.0.1:9007"
+        buffer-management prebuffering
+        buffer 40
+        prebuffering 20
+    }
+    sub-08 {
+        type dabplus
+        bitrate 88
+        id 8
+        protection 3
+        inputproto edi
+        inputuri "tcp://127.0.0.1:9008"
+        buffer-management prebuffering
+        buffer 40
+        prebuffering 20
+    }
+    sub-09 {
+        type dabplus
+        bitrate 88
+        id 9
+        protection 3
+        inputproto edi
+        inputuri "tcp://127.0.0.1:9009"
+        buffer-management prebuffering
+        buffer 40
+        prebuffering 20
+    }
+    sub-10 {
+        type dabplus
+        bitrate 88
+        id 10
+        protection 3
+        inputproto edi
+        inputuri "tcp://127.0.0.1:9010"
+        buffer-management prebuffering
+        buffer 40
+        prebuffering 20
+    }
+    sub-11 {
+        type dabplus
+        bitrate 88
+        id 11
+        protection 3
+        inputproto edi
+        inputuri "tcp://127.0.0.1:9011"
+        buffer-management prebuffering
+        buffer 40
+        prebuffering 20
+    }
+    sub-12 {
+        type dabplus
+        bitrate 88
+        id 12
+        protection 3
+        inputproto edi
+        inputuri "tcp://127.0.0.1:9012"
+        buffer-management prebuffering
+        buffer 40
+        prebuffering 20
+    }
+    sub-13 {
+        type dabplus
+        bitrate 88
+        id 13
+        protection 3
+        inputproto edi
+        inputuri "tcp://127.0.0.1:9013"
+        buffer-management prebuffering
+        buffer 40
+        prebuffering 20
+    }    
+}
+
+components {
+    comp-01 {
+        service srv-01
+        subchannel sub-01
+        user-applications {
+            userapp "slideshow"
+        }
+    }
+    comp-02 {
+        service srv-02
+        subchannel sub-02
+        user-applications {
+            userapp "slideshow"
+        }
+    }
+    comp-03 {
+        service srv-03
+        subchannel sub-03
+        user-applications {
+            userapp "slideshow"
+        }
+    }
+    comp-04 {
+        service srv-04
+        subchannel sub-04
+        user-applications {
+            userapp "slideshow"
+        }
+    }
+    comp-05 {
+        service srv-05
+        subchannel sub-05
+        user-applications {
+            userapp "slideshow"
+        }
+    }
+    comp-06 {
+        service srv-06
+        subchannel sub-06
+        user-applications {
+            userapp "slideshow"
+        }
+    }
+    comp-07 {
+        service srv-07
+        subchannel sub-07
+        user-applications {
+            userapp "slideshow"
+        }
+    }
+    comp-08 {
+        service srv-08
+        subchannel sub-08
+        user-applications {
+            userapp "slideshow"
+        }
+    }
+    comp-09 {
+        service srv-09
+        subchannel sub-09
+        user-applications {
+            userapp "slideshow"
+        }
+    }
+    comp-10 {
+        service srv-10
+        subchannel sub-10
+        user-applications {
+            userapp "slideshow"
+        }
+    }
+    comp-11 {
+        service srv-11
+        subchannel sub-11
+        user-applications {
+            userapp "slideshow"
+        }
+    }
+    comp-12 {
+        service srv-12
+        subchannel sub-12
+        user-applications {
+            userapp "slideshow"
+        }
+    }
+    comp-13 {
+        service srv-13
+        subchannel sub-13
+        user-applications {
+            userapp "slideshow"
+        }        
+    }
+}
+
+outputs { 
+    zeromq {
+        ; Listen on all interfaces, on port 9999
+        endpoint "tcp://*:9999"
+        allowmetadata true
+    }
+    throttle "simul://"
+}
