@@ -16,7 +16,7 @@ host : dabcast
 user : odr
 pass : odr
 
-Et une ip fixe : 192.168.1.95 (Ip pour cette configuration)
+Et une ip fixe
 
 Copiez le dossier dabcast dans home/odr/
 
@@ -63,7 +63,7 @@ Rendez vous sur firefox ou Chromium (moins lourd) et tapez l’aresse: http://lo
 user : odr
 pass : odr
 
-Le Manager de Mux est ici => http://192.168.1.95:8002
+Le Manager de Mux est ici => http://localhost:8002
 
 *****************************************************
 EasyDab2 Config :
