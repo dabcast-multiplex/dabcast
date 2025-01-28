@@ -41,6 +41,8 @@ sudo apt-get install -y git
 
 puis installez les outils ODR :
 
+git clone https://github.com/dabcast-multiplex/dabcast.git
+
 sudo bash dabcast/install/mmbtools-get --branch next install
 
 *********************************
